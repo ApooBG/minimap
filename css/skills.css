@@ -1,0 +1,49 @@
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b3c49;
+    font-family: Georgia, serif;
+    font-family: Garamond, serif;
+}
+
+.header {
+    width: 80%;
+    height: 15%;
+    background-color: #ffb400;
+    border-radius: 5px; 
+    position: relative;
+    text-align: center;
+    margin: auto;
+
+}
+
+.header a{
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    position: relative;
+    top: 12%;
+    text-decoration-line: underline;
+}
+
+table {
+    width: 90%;
+    height: 70%;
+    background-color: #ffb400;
+    position: relative;
+    left: 5%;
+    font-size: 40px;
+    top: 5%;
+}
+
+td {
+    font-size: 30px;
+    text-align: center;
+    padding: 25px;
+    height: 50%;
+}
+
+table, th, td, tr {
+    border: 1px solid;
+}

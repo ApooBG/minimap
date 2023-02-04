@@ -1,0 +1,100 @@
+img {
+    position: absolute;
+    z-index: 99;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    width: calc(100vw - (100vw - 100%));
+    height:  calc(100vh - (100vh - 100%));;   
+    background-color: gray;
+    z-index: -1;
+}
+
+.insideBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 30vw;
+    height: 30vh;
+
+    position: relative;
+
+}
+
+.pageOne {
+    background-color: blue;
+}
+
+.pageOne object {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.pageOne img {
+    width: 40%;
+    height: 50%;
+    position: relative;
+    top: 10%;
+    z-index: 1;
+
+}
+
+.pageTwo {
+    background-color: green;
+}
+
+.pageThree {
+    background-color: red;
+}
+
+.pageFour {
+    background-color: yellow;
+}
+
+.pageFive {
+    background-color: violet;
+}
+
+.pageSix {
+    background-color: orange;
+}
+
+.pageSeven {
+    background-color: greenyellow;
+}
+
+.pageEight {
+    background-color: brown;
+}
+
+.pageNine{
+    background-color: cyan;
+}
+
+.insideBox {
+    top: 0%;
+}
+
+object {
+	width: 100%;
+	height: 100%;
+object-fit: fill;
+}
+
+.test {
+	width: 25%;
+	height: 30%;
+	background-color: red;
+	position: relative;
+	top: 10%;
+	left: 5%;
+}

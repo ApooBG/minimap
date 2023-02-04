@@ -1,0 +1,70 @@
+<html>
+<head>
+    <script defer src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        #minimapCanvas {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      </style>
+      <script>
+        window.onload = function() {
+          // Get the canvas element and its context
+          var canvas = document.getElementById("myCanvas");
+          var context = canvas.getContext("2d");
+  
+          // Draw something on the main canvas
+
+          context.fillRect(0, 0, canvas.width, canvas.height);
+  
+          saveCanvas();
+        }
+  
+        function saveCanvas() {
+          // Get the canvas element and its context
+          var canvas = document.getElementById("myCanvas");
+          var context = canvas.getContext("2d");
+  
+          // Get the image data from the canvas
+          var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+  
+          // Create a new canvas for the minimap
+          var minimapCanvas = document.getElementById("minimapCanvas");
+          minimapCanvas.width = 100;
+          minimapCanvas.height = 100;
+          var minimapContext = minimapCanvas.getContext("2d");
+  
+          // Draw the image data on the minimap canvas
+          minimapContext.putImageData(imageData, 0, 0, 0, 0, minimapCanvas.width, minimapCanvas.height);
+        }
+      </script>
+</head>
+<body>
+<div class="box">
+    
+    <img id="inFront" src="images/inFront.png" width="200px">
+    <div onmousedown="Attack()" id="insideBox" class="insideBox"> 
+        <div id="pageOne" class="pageOne">
+            <canvas id="myCanvas" width="500" height="500"></canvas>
+            <canvas id="minimapCanvas" width="100" height="100"></canvas>
+            <a id="pageOneText">Skills & Experience</a>
+            <img id="scroll" src="images/scroll.png">
+        </div>
+        <div id="pageTwo" class="pageTwo"></div>
+        <div id="pageThree" class="pageThree"></div>
+        <div id="pageFour" class="pageFour"></div>
+        <div id="pageFive" class="pageFive"></div>
+        <div id="pageSix" class="pageSix"></div>
+        <div id="pageSeven" class="pageSeven"></div>
+        <div id="pageEight" class="pageEight"></div>
+        <div id="pageNine" class="pageNine"></div>
+    </div>
+</div>
+
+</body>
+</html>
+
